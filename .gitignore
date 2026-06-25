@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+.env
+.vscode
+.cache
+*.local
+tmp
+herbquest-live-check.png
+dev-server.log
+*.tsbuildinfo
