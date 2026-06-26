@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #123f31;
+  background: #fffaf0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    Montserrat,
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans SC",
+    system-ui,
+    sans-serif;
+}
+
+img,
+iframe {
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(200, 146, 53, 0.35);
+  outline-offset: 3px;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10;
+    scroll-margin-top: 96px;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.2em] text-gold;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2.5 text-sm font-semibold text-muted transition hover:bg-skyglass hover:text-berry;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-sage/30 bg-cream/70 px-4 py-2 text-sm font-semibold text-muted shadow-sm backdrop-blur-xl;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-full border border-gold/20 bg-skyglass px-3 py-1.5 text-xs font-semibold text-berry;
+  }
+
+  .skill-chip {
+    @apply inline-flex items-center rounded-2xl border border-sage/30 bg-cream/70 px-4 py-3 text-sm font-semibold text-muted transition hover:border-gold/40 hover:text-berry;
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-herb px-5 py-3 text-sm font-semibold text-white shadow-lift transition hover:-translate-y-0.5 hover:bg-pine active:translate-y-0;
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-sage/40 bg-cream/75 px-5 py-3 text-sm font-semibold text-ink shadow-sm backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-gold/50 hover:text-berry active:translate-y-0;
+  }
+
+  .button-ghost {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted transition hover:bg-skyglass hover:text-berry active:translate-y-0;
+  }
+
+  .filter-chip {
+    @apply shrink-0 rounded-full px-4 py-2 text-sm font-semibold text-muted transition hover:bg-skyglass hover:text-berry;
+  }
+
+  .filter-chip-active {
+    @apply bg-herb text-white hover:bg-pine hover:text-white;
+  }
+
+  .orbit-card {
+    @apply rounded-3xl border border-sage/40 bg-cream/80 px-4 py-3 text-sm font-semibold text-ink shadow-sm backdrop-blur-xl;
+  }
+
+  .herb-line {
+    background: linear-gradient(90deg, transparent, rgba(200, 146, 53, 0.44), transparent);
+  }
+
+  .modal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(18, 63, 49, 0.34) transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .modal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar-thumb {
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+    background-color: rgba(18, 63, 49, 0.3);
+  }
+}
+
+@media (max-width: 420px) {
+  .button-primary,
+  .button-secondary,
+  .button-ghost {
+    width: 100%;
+  }
+}
